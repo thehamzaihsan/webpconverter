@@ -2,7 +2,7 @@ const input = document.querySelector("input");
 const output = document.querySelector("img");
 const download = document.querySelector("#download");
 const progress = document.querySelector("progress");
-
+const downloadall = document.querySelector("#downloadall")
 input.addEventListener("change", function () {
   progress.style.display = "block";
   const files = input.files;
@@ -31,6 +31,7 @@ input.addEventListener("change", function () {
           link.href = URL.createObjectURL(blob);
           link.download = file.name.replace(/\.[^/.]+$/, "") + ".webp";
           link.innerHTML = file.name.replace(/\.[^/.]+$/, "") + ".webp";
+          link.classList.add("webplink");
           const linkwrapper = document.createElement("div");
           const linkimg = document.createElement("img");
           linkimg.src = URL.createObjectURL(blob);
@@ -48,10 +49,10 @@ input.addEventListener("change", function () {
     reader.readAsDataURL(file);
   }
 
-  //   download.addEventListener('click', function() {
-  //     const links = download.querySelectorAll('a');
-  //     for (let i = 0; i < links.length; i++) {
-  //       links[i].click();
-  //     }
-  //   });
+    downloadall.addEventListener('click', function() {
+      const links = download.querySelectorAll('.webplink');
+      for (let i = 0; i < links.length; i++) {
+        links[i].click();
+      }
+    });
 });

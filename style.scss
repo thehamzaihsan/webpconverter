@@ -5,6 +5,8 @@ body , html{
     font-family: "Inter";
     font-size: 16px;
     height: 100vh;
+    background-color: #eeeeff;  
+    overflow-x: hide;
 }
 
 *{
@@ -34,7 +36,7 @@ progress{
 .input{
     display: flex;
     justify-content: center;
-    margin: 2rem;
+    gap: 1rem;
     flex-direction: column;
     align-items: center;
 }
@@ -63,7 +65,7 @@ footer{
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: rgb(69, 69, 249);
+    background-color: #5151e3;
     min-height: 4rem;
     color: white;
     text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.638)  ;

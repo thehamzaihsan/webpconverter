@@ -30,7 +30,7 @@ input.addEventListener("change", function () {
           const link = document.createElement("a");
           link.href = URL.createObjectURL(blob);
           link.download = file.name.replace(/\.[^/.]+$/, "") + ".webp";
-          link.innerHTML = file.name.replace(/\.[^/.]+$/, "") + ".webp";
+          link.textContent = file.name.replace(/\.[^/.]+$/, "") + ".webp";
           link.classList.add("webplink");
           const linkwrapper = document.createElement("div");
           const linkimg = document.createElement("img");
